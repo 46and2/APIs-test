@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Working with APIs</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="app">
+        <div id="person" class="content-block">
+            <h1 class="content-heading">Meet</h1>
+            <img class="headshot" :src="personInfo.photo" :alt="personInfo.name">
+            <h2><span class="title">{{ title }}</span>{{ personInfo.name }} {{personInfo.surname }}</h2>
+            <h3 class="age">{{ age }}</h3>
+        </div>
+
+        <div id="gallery" class="content-block">
+            <h1 class="content-heading">Gallery</h1>
+            <img class="gallery-photo" :src="imageUrl" alt="" v-for="imageUrl of imageUrls">
+        </div>
+
+        <div id="country" class="content-block">
+            <h1 class="content-heading">From</h1>
+            <h2>{{ countryData.name }}</h2>
+            <img class="flag" :src="countryData.flag" :alt="countryData.name">
+            <h3>About this country:</h3>
+            <ul>
+                <li>Native name: {{ countryData.nativeName }}</li>
+                <li>Capital: {{ countryData.capital }}</li>
+                <li>Area: {{ countryData.area }}</li>
+                <li>Population: {{ countryData.population }}</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <script src="https://unpkg.com/vue/dist/vue.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="conf.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
