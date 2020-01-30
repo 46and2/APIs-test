@@ -1,5 +1,4 @@
 # APIs-test
-Тестовое задание для ЭкоСофт (lexema.ru)
 
 Для корректной работы нужно получить API_KEY на
     https://unsplash.com/documentation#creating-a-developer-account
